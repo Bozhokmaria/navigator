@@ -7,5 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         LOGGER.info("Navigator initial app");
+        LOGGER.info("My new branch");
     }
 }
