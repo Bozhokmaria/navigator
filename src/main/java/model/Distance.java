@@ -50,7 +50,7 @@ public class Distance {
 
     @Override
     public String toString() {
-        return "DistanceModel{" +
+        return "Distance{" +
                 "id=" + id +
                 ", distance=" + distance +
                 ", id city 1=" + city1Id +
