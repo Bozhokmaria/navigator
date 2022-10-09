@@ -1,13 +1,13 @@
-package models;
+package model;
 
-public class CityModel {
+public class City {
     private int id;
     private String name;
 
-    public CityModel() {
+    public City() {
     }
 
-    public CityModel(int id, String name) {
+    public City(int id, String name) {
         this.id = id;
         this.name = name;
     }

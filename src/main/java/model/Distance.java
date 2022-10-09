@@ -1,19 +1,19 @@
-package models;
+package model;
 
-public class DistanceModel {
+public class Distance {
     private int id;
     private double distance;
-    private int city1_id;
-    private int city2_id;
+    private int city1Id;
+    private int city2Id;
 
-    public DistanceModel() {
+    public Distance() {
     }
 
-    public DistanceModel(int id, double distance, int city1_id, int city2_id) {
+    public Distance(int id, double distance, int city1Id, int city2Id) {
         this.id = id;
         this.distance = distance;
-        this.city1_id = city1_id;
-        this.city2_id = city2_id;
+        this.city1Id = city1Id;
+        this.city2Id = city2Id;
     }
 
     public int getId() {
@@ -33,19 +33,19 @@ public class DistanceModel {
     }
 
     public int getCity1_id() {
-        return city1_id;
+        return city1Id;
     }
 
-    public void setCity1_id(int city1_id) {
-        this.city1_id = city1_id;
+    public void setCity1_id(int city1Id) {
+        this.city1Id = city1Id;
     }
 
     public int getCity2_id() {
-        return city2_id;
+        return city2Id;
     }
 
-    public void setCity2_id(int city2_id) {
-        this.city2_id = city2_id;
+    public void setCity2_id(int city2Id) {
+        this.city2Id = city2Id;
     }
 
     @Override
@@ -53,8 +53,8 @@ public class DistanceModel {
         return "DistanceModel{" +
                 "id=" + id +
                 ", distance=" + distance +
-                ", id city 1=" + city1_id +
-                ", id city 2=" + city2_id +
+                ", id city 1=" + city1Id +
+                ", id city 2=" + city2Id +
                 '}';
     }
 }
