@@ -1,4 +1,4 @@
-import dao.impl.DistanceDAOImpl;
+import com.solvd.navigator.dao.impl.DistanceDAOImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

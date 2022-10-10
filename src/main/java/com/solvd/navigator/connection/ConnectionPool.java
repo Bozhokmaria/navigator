@@ -1,4 +1,4 @@
-package connection;
+package com.solvd.navigator.connection;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

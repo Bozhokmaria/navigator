@@ -1,4 +1,4 @@
-package model;
+package com.solvd.navigator.model;
 
 public class City {
     private int id;

@@ -1,6 +1,6 @@
-package dao;
+package com.solvd.navigator.dao;
 
-import model.City;
+import com.solvd.navigator.model.City;
 
 import java.util.List;
 

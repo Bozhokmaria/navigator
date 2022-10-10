@@ -1,8 +1,8 @@
-package dao.impl;
+package com.solvd.navigator.dao.impl;
 
-import connection.ConnectionPool;
-import dao.CityDAO;
-import model.City;
+import com.solvd.navigator.connection.ConnectionPool;
+import com.solvd.navigator.dao.CityDAO;
+import com.solvd.navigator.model.City;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
