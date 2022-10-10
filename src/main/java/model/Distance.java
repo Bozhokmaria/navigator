@@ -53,8 +53,8 @@ public class Distance {
         return "Distance{" +
                 "id=" + id +
                 ", distance=" + distance +
-                ", id city 1=" + city1Id +
-                ", id city 2=" + city2Id +
+                ", city1Id=" + city1Id +
+                ", city2Id=" + city2Id +
                 '}';
     }
 }
