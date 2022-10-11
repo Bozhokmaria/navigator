@@ -4,59 +4,79 @@ import java.util.*;
 
 public class NodeService {
 
-    private String name;
+    public static class Node {
+        private String name;
 
-    private List<NodeService> shortestPath = new LinkedList<>();
+        private Double totalDistance;
 
-    private Integer distance = Integer.MAX_VALUE;
+        private List<Node> shortestPath = new LinkedList<>();
 
-    Map<NodeService, Integer> adjacentNodes = new HashMap<>();
+        private Double distance = Double.MAX_VALUE;
 
-    public void addDestination(NodeService destination, int distance) {
-        adjacentNodes.put(destination, distance);
+        Map<Node, Double> adjacentNodes = new HashMap<>();
+
+        public void addDestination(Node destination, double distance) {
+            adjacentNodes.put(destination, distance);
+        }
+
+        public Node(String name) {
+            this.name = name;
+        }
+
+        public Double getTotalDistance() {
+            return totalDistance;
+        }
+
+        public void setTotalDistance(Double totalDistance) {
+            this.totalDistance = totalDistance;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public List<Node> getShortestPath() {
+            return shortestPath;
+        }
+
+        public void setShortestPath(List<Node> shortestPath) {
+            this.shortestPath = shortestPath;
+        }
+
+        public Double getDistance() {
+            return distance;
+        }
+
+        public void setDistance(Double distance) {
+            this.distance = distance;
+        }
+
+        public Map<Node, Double> getAdjacentNodes() {
+            return adjacentNodes;
+        }
+
+        public void setAdjacentNodes(Map<Node, Double> adjacentNodes) {
+            this.adjacentNodes = adjacentNodes;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "name='" + name + '\'' +
+                    '}';
+        }
     }
 
-    public NodeService(String name) {
-        this.name = name;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<NodeService> getShortestPath() {
-        return shortestPath;
-    }
-
-    public void setShortestPath(List<NodeService> shortestPath) {
-        this.shortestPath = shortestPath;
-    }
-
-    public Integer getDistance() {
-        return distance;
-    }
-
-    public void setDistance(Integer distance) {
-        this.distance = distance;
-    }
-
-    public Map<NodeService, Integer> getAdjacentNodes() {
-        return adjacentNodes;
-    }
-
-    public void setAdjacentNodes(Map<NodeService, Integer> adjacentNodes) {
-        this.adjacentNodes = adjacentNodes;
-    }
-
-    public static NodeService getLowestDistanceNode(Set <NodeService> unsettledNodes) {
-        NodeService lowestDistanceNode = null;
-        int lowestDistance = Integer.MAX_VALUE;
-        for (NodeService node: unsettledNodes) {
-            int nodeDistance = node.getDistance();
+    public static Node getLowestDistanceNode(Set<Node> unsettledNodes) {
+        Node lowestDistanceNode = null;
+        double lowestDistance = Double.MAX_VALUE;
+        for (Node node: unsettledNodes) {
+            double nodeDistance = node.getDistance();
             if (nodeDistance < lowestDistance) {
                 lowestDistance = nodeDistance;
                 lowestDistanceNode = node;

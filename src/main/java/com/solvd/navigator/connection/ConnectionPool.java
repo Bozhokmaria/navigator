@@ -26,7 +26,7 @@ public class ConnectionPool {
             c = DriverManager.getConnection(url, user, password);
 
             if (c != null) {
-                log.info("Connected");
+               // log.info("Connected");
             }
         } catch (SQLException | IOException e) {
             System.out.println(e.getMessage());
@@ -38,7 +38,7 @@ public class ConnectionPool {
         try {
             if (c != null) {
                 c.close();
-                log.info("Connection closed");
+              //  log.info("Connection closed");
             }
         }
         catch (SQLException e) {
@@ -50,7 +50,7 @@ public class ConnectionPool {
         try {
             if (ps != null) {
                 ps.close();
-                log.info("PreparedStatement closed");
+              //  log.info("PreparedStatement closed");
             }
         }
         catch (SQLException e) {
@@ -62,7 +62,7 @@ public class ConnectionPool {
         try {
             if (rs != null) {
                 rs.close();
-                log.info("ResultSet closed");
+               // log.info("ResultSet closed");
             }
         }
         catch (SQLException se) {

@@ -18,6 +18,8 @@ public class CityDAOImpl implements CityDAO {
 
     private static final String GET_ALL = "SELECT * FROM city";
 
+    private static final String GET_ID_BY_NAME = "SELECT id FROM city WHERE name=?";
+
 
     @Override
     public List<City> getAll() {
@@ -71,5 +73,29 @@ public class CityDAOImpl implements CityDAO {
             ConnectionPool.closeConnection(connection);
         }
         return null;
+    }
+
+    @Override
+    public int getIdByName(String name) {
+        Connection connection = null;
+        PreparedStatement ps = null;
+        int id = 0;
+        try {
+            connection = ConnectionPool.getConnection();
+            ps = connection.prepareStatement(GET_ID_BY_NAME);
+            ps.setString(1, name);
+
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                id = rs.getInt("id");
+                return id;
+            }
+        } catch (SQLException e) {
+            LOGGER.error(e.getMessage());
+        } finally {
+            ConnectionPool.closePreparedStatement(ps);
+            ConnectionPool.closeConnection(connection);
+        }
+        return -1;
     }
 }
