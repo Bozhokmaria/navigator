@@ -66,7 +66,8 @@ VALUES (1, 140, 1, 7),
        (36, 167, 17, 23),
        (37, 150, 13, 23),
        (38, 134, 13, 17),
-       (39, 186, 19, 22);
+       (39, 186, 19, 22),
+       (40, 378, 4, 11);
 
 select dis.id, cit.name as city_1, ci.name as city_2, dis.distance
 from distance as dis

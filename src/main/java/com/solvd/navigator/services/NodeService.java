@@ -67,9 +67,7 @@ public class NodeService {
 
         @Override
         public String toString() {
-            return "Node{" +
-                    "name='" + name + '\'' +
-                    '}';
+            return "'" + name + '\'';
         }
     }
 

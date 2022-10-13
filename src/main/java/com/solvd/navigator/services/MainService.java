@@ -19,7 +19,7 @@ public class MainService {
         List<List<Distance>> distancesForNodes = DistanceService.getDistancesForEveryNode(cityNames);
         NodeService.addAllRelatedNodesToNode(nodes, distancesForNodes);
         NodeService.Node[] resultPath = NodeService.getResultPath(nodes, citiesFromAndTo);
-        LOGGER.info(Arrays.toString(resultPath) + " ; Distance -> " + resultPath[resultPath.length - 1].getDistance());
+        LOGGER.info("The shortest way will be through: " + Arrays.toString(resultPath) + " ; Distance -> " + resultPath[resultPath.length - 1].getDistance());
 
     }
 
