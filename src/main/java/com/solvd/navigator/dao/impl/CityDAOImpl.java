@@ -1,8 +1,8 @@
-package dao.impl;
+package com.solvd.navigator.dao.impl;
 
-import connection.ConnectionPool;
-import dao.CityDAO;
-import model.City;
+import com.solvd.navigator.connection.ConnectionPool;
+import com.solvd.navigator.dao.CityDAO;
+import com.solvd.navigator.model.City;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,6 +17,8 @@ public class CityDAOImpl implements CityDAO {
     private static final String GET_BY_ID = "SELECT * FROM city WHERE id=?";
 
     private static final String GET_ALL = "SELECT * FROM city";
+
+    private static final String GET_ID_BY_NAME = "SELECT id FROM city WHERE name=?";
 
 
     @Override
@@ -71,5 +73,29 @@ public class CityDAOImpl implements CityDAO {
             ConnectionPool.closeConnection(connection);
         }
         return null;
+    }
+
+    @Override
+    public int getIdByName(String name) {
+        Connection connection = null;
+        PreparedStatement ps = null;
+        int id = 0;
+        try {
+            connection = ConnectionPool.getConnection();
+            ps = connection.prepareStatement(GET_ID_BY_NAME);
+            ps.setString(1, name);
+
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                id = rs.getInt("id");
+                return id;
+            }
+        } catch (SQLException e) {
+            LOGGER.error(e.getMessage());
+        } finally {
+            ConnectionPool.closePreparedStatement(ps);
+            ConnectionPool.closeConnection(connection);
+        }
+        return -1;
     }
 }

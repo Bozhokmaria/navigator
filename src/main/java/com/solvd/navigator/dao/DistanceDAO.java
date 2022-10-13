@@ -1,6 +1,6 @@
-package dao;
+package com.solvd.navigator.dao;
 
-import model.Distance;
+import com.solvd.navigator.model.Distance;
 
 import java.util.List;
 
