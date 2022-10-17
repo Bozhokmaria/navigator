@@ -1,7 +1,7 @@
 use navigator;
 
 INSERT INTO city (id, name)
-VALUES (1, 'Kiev'),
+VALUES (1, 'Kyiv'),
        (2, 'Cherkasy'),
        (3, 'Chernihiv'),
        (4, 'Poltava'),
