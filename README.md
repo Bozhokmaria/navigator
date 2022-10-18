@@ -1,14 +1,11 @@
-<h1 align="center">НАВІГАТОР</h1>
+<h1 align="center">NAVIGATOR</h1>
 
 
-<h4 align="center"><em>Програмний продукт "Навігатор" призначений для пошуку найкоротшого шляху між двоми містами.</em></h4>
+<h4 align="center"><em>The software product "Navigator" is designed to find the shortest path between two cities.</em></h4>
 
 
-1. Після запуску програми потрібно обрати зі списку  місто, з якого починаєтьтся подорож, та коректно ввести його з клавіатури.
-![An image](https://user-images.githubusercontent.com/52661211/196360924-4794d929-95b4-4304-b363-8b0f2de92718.PNG)
-2. Далі потрібно обрати місто, в якому подорож закінчується, також коректно ввести його з клавіатури.
-![An image](https://user-images.githubusercontent.com/52661211/196364361-d5d8b5e8-6e6d-4373-a2bb-a6dbf7fdebf7.PNG)
-3. Після цього на екрані виведеться найкоротший шлях між двома вказаними вами містами, з відстанню.
-![An image](https://user-images.githubusercontent.com/52661211/196364983-8ffc591f-61d4-4ee2-be07-d62add0a7a3b.PNG)
+1. Select from the list the city from which the journey starts and enter it correctly from the keyboard.
+2. Choose the city in which the journey ends, and also enter it correctly from the keyboard.
+3. After that, the shortest path between the two cities you specified will be displayed on the screen, with the distance.
 
 
