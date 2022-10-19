@@ -72,12 +72,12 @@ public class CityService {
         return result;
     }
 
-    private static String getFirstLetterCapitalizedCity(String cityFrom) {
-        cityFrom.toLowerCase();
-        char[] chars = cityFrom.toCharArray();
+    private static String getFirstLetterCapitalizedCity(String city) {
+        city = city.toLowerCase();
+        char[] chars = city.toCharArray();
         chars[0] = Character.toUpperCase(chars[0]);
-        cityFrom = new String(chars);
-        return cityFrom;
+        city = new String(chars);
+        return city;
     }
 
     private static boolean checkIfCityIsPresent(String city) {
